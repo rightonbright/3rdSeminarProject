@@ -14,12 +14,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val name : String = kakaoItems[idx].name
         val profile : Int = kakaoItems[idx].profile
 
-
         val intent : Intent = Intent(applicationContext, ChatActivity::class.java)
         intent.putExtra("name", name)
         intent.putExtra("profile", profile)
         startActivity(intent)
-
     }
 
     lateinit var kakaoItems : ArrayList<KakaoData>

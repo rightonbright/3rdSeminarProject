@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.EditText
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class KakaoAdapter(private var kakaoItems : ArrayList<KakaoData>) : RecyclerView.Adapter<KakaoViewHolder>(){
 
@@ -34,12 +35,11 @@ class KakaoAdapter(private var kakaoItems : ArrayList<KakaoData>) : RecyclerView
     val context: Context? = null
 
     override fun onBindViewHolder(holder: KakaoViewHolder, position: Int) {
-
-
         holder.kakaoProfile.setImageResource(kakaoItems[position].profile)
-
-        holder.kakaoName.text = kakaoItems[position].name
-        holder.kakaoDate.text = kakaoItems[position].date
+        holder.kakaoName.text   = kakaoItems[position].name
+        holder.kakaoDate.text   = kakaoItems[position].date
         holder.kakaoPreview.text = kakaoItems[position].preView
+
     }
+
 }

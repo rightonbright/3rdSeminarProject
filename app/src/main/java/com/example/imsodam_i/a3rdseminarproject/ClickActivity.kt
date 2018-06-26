@@ -3,6 +3,7 @@ package com.example.imsodam_i.a3rdseminarproject
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_chat.*
+import kotlinx.android.synthetic.main.activity_profile.*
 
 class ClickActivity : AppCompatActivity() {
 
@@ -13,9 +14,8 @@ class ClickActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        chat_profile_image.setImageResource(intent.getIntExtra("profile", 0))
-        chat_name_tv.setText((intent.getIntExtra("name", 0)))
-
+        click_name_tv.text = intent.getStringExtra("name")
+        click_profile_img.setImageResource(intent.getIntExtra("profile", 0))
 
 
     }

@@ -7,6 +7,4 @@ data class KakaoData (
     var name: String,
     var preView : String,
     var date : String
-    // var textView : String
-
 )
