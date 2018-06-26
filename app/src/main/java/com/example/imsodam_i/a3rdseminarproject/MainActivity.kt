@@ -6,10 +6,6 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
-import android.text.Editable
-import android.text.TextWatcher
-import android.widget.EditText
-
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -28,7 +24,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var kakaoItems : ArrayList<KakaoData>
     lateinit var KakaoAdapter : KakaoAdapter
-//     val search = findViewById(R.id.main_et) as EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,40 +41,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         kakaoItems.add(KakaoData(R.drawable.img5, "우리 가족",
                 "알겠습니다~!", "오후 1:07"))
         kakaoItems.add(KakaoData(R.drawable.img6, "재후니오빠",
-                "웅 담아", "오후 2:17"))
+                "웅 시혀나", "오후 2:17"))
         kakaoItems.add(KakaoData(R.drawable.img9, "예쁜햄",
                 "오늘 모해요....?", "오후 3:04"))
         kakaoItems.add(KakaoData(R.drawable.img8, "안드 2조",
                 "넹~~~~!", "오후 4:07"))
-        kakaoItems.add(KakaoData(R.drawable.img10, "임소담이",
+        kakaoItems.add(KakaoData(R.drawable.img10, "시현",
                 "ㅠㅠㅠ", "오후 4:08"))
         kakaoItems.add(KakaoData(R.drawable.img11, "주히유",
                 "고마우미~~", "오후 4:14"))
 
-        // 어댑터에 붙히기 작업
         KakaoAdapter = KakaoAdapter(kakaoItems)
-        KakaoAdapter.setOnItemClickListener(this)   // 채팅방 클릭
+        KakaoAdapter.setOnItemClickListener(this)
 
         main_rv.layoutManager = LinearLayoutManager(this)
         main_rv.adapter = KakaoAdapter
-
-//        search.addTextChangedListener(object : TextWatcher {
-//            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-//
-//            }
-//
-//            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-//
-//                //
-//                // searchUser(s.toString())
-//
-//            }
-//
-//            override fun afterTextChanged(s: Editable) {
-//
-//            }
-//        })
-
 
     }
 }
