@@ -3,6 +3,8 @@ package com.example.imsodam_i.a3rdseminarproject
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
@@ -56,4 +58,5 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         main_rv.adapter = KakaoAdapter
 
     }
+
 }

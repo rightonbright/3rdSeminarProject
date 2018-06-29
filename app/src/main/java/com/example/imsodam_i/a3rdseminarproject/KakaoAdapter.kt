@@ -42,4 +42,5 @@ class KakaoAdapter(private var kakaoItems : ArrayList<KakaoData>) : RecyclerView
 
     }
 
+
 }
